@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HOLO+FACE 合作開發提案</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --accent-color: #d6ad60; /* 品牌質感金 */
+            --secondary-color: #64feda; /* 科技青 */
+            --bg-color: #1a1a1a;
+        }
+        .reveal { font-family: 'Helvetica Neue', Helvetica, Arial, "Microsoft JhengHei", sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; color: var(--accent-color); }
+        .reveal h4, .reveal h5, .reveal h6 { color: #e0e0e0; }
+        .reveal p, .reveal li { font-size: 0.75em; line-height: 1.6; color: #ccc; }
+        .highlight { color: var(--secondary-color); font-weight: bold; }
+        .tag { background: rgba(100, 254, 218, 0.1); color: var(--secondary-color); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+        
+        /* 卡片佈局優化 */
+        .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .card { 
+            background: rgba(255,255,255,0.08); 
+            padding: 20px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-color); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        
+        .icon-box { font-size: 2em; margin-bottom: 15px; color: var(--accent-color); }
+        .small-text { font-size: 0.6em !important; color: #888; }
+        
+        /* 連結樣式 */
+        a { color: var(--secondary-color) !important; text-decoration: none; border-bottom: 1px dashed var(--secondary-color); }
+
+        /* 表格樣式優化 */
+        table { border-collapse: separate; border-spacing: 0 10px; width: 100%; }
+        th { text-align: left; border-bottom: 2px solid var(--accent-color); padding: 10px; color: var(--accent-color); }
+        td { background: rgba(255,255,255,0.05); padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-left: 1px solid rgba(255,255,255,0.1); }
+        td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-right: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 1. 封面 -->
+            <section>
+                <div style="margin-bottom: 30px;">
+                    <i class="fa-solid fa-camera-retro" style="font-size: 3em; color: white;"></i>
+                    <span style="font-size: 2em; margin: 0 15px; color: var(--accent-color);">×</span>
+                    <i class="fa-solid fa-microchip" style="font-size: 3em; color: var(--secondary-color);"></i>
+                </div>
+                <h2>HOLO+FACE 合作開發提案</h2>
+                <h4>技術驅動的商業轉型藍圖</h4>
+                <div style="margin-top: 40px; border-top: 1px solid #444; padding-top: 20px;">
+                    <p>提案團隊：KC、IVAN、NIGEL</p>
+                </div>
+            </section>
+
+            <!-- 2. 團隊優勢 (Why Us) -->
+            <section>
+                <h3><i class="fa-solid fa-code-branch"></i> 為什麼要選擇我們？</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <i class="fa-solid fa-rocket icon-box"></i>
+                        <h5>極速開發</h5>
+                        <p>曾打造貴司預約系統，省去 80% 磨合期，不需要從頭解釋。</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-brain icon-box"></i>
+                        <h5>AI 導向</h5>
+                        <p>未來團隊必須是 AI 重度使用者，研究 LLM 與影像模型轉化為可獲利的商業功能。</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-server icon-box"></i>
+                        <h5>全端架構</h5>
+                        <p>從影像處理到前端 APP 體驗，具備完整且企業安全等級的系統構建能力。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2.5 核心成員介紹 (新增區塊) -->
+            <section>
+                <h3><i class="fa-solid fa-user-group"></i> 核心成員介紹</h3>
+                <div class="grid-container">
+                    <!-- KC -->
+                    <div class="card" style="text-align: left;">
+                        <h6 style="color: var(--secondary-color); margin-bottom: 5px;">郭剛志(KC)</h6>
+                        <p class="small-text" style="font-weight:bold; margin-bottom: 10px;">USF CS碩士</p>
+                        <ul style="font-size: 0.6em; margin-left: 15px;">
+                            <li>10+年後端、全端、資料科學經驗。</li>
+                            <li>多次協助企業導入各式系統、雲端、電商外掛。</li>
+                            <li>C端\B端經驗兼具。</li>
+                        </ul>
+                    </div>
+                    <!-- Ivan -->
+                    <div class="card" style="text-align: left;">
+                        <h6 style="color: var(--secondary-color); margin-bottom: 5px;">羅成俊(Ivan)</h6>
+                        <p class="small-text" style="font-weight:bold; margin-bottom: 10px;">台大電機碩士</p>
+                        <ul style="font-size: 0.6em; margin-left: 15px;">
+                            <li>C端經驗豐富。</li>
+                            <li>大型應用開發經驗(HTC、17Live etc)。</li>
+                            <li>管理經驗豐富。</li>
+                        </ul>
+                    </div>
+                    <!-- Nigel -->
+                    <div class="card" style="text-align: left;">
+                        <h6 style="color: var(--secondary-color); margin-bottom: 5px;">梁乃強(Nigel)</h6>
+                        <p class="small-text" style="font-weight:bold; margin-bottom: 10px;">UCLA CS碩士</p>
+                        <ul style="font-size: 0.6em; margin-left: 15px;">
+                            <li>15+年軟體開發(谷歌、臉書、Confluent etc)。</li>
+                            <li>具CTO經驗。</li>
+                            <li>有政府標案經驗。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 架構總覽 -->
+            <section>
+                <h3>提案架構總覽</h3>
+                <div style="display: flex; gap: 30px; margin-top: 30px;">
+                    <div class="card" style="flex: 1; border-top: 4px solid var(--accent-color);">
+                        <h4><i class="fa-solid fa-wand-magic-sparkles"></i> HOLO+AI</h4>
+                        <p><strong>C 端營收與體驗升級</strong></p>
+                        <ul style="font-size: 0.7em;">
+                            <li>AI 膚質/健康檢測 (日康/玩美移動)</li>
+                            <li>AI 個人色彩鑑定</li>
+                            <li>活用圖資 (生成式寫真)</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="flex: 1; border-top: 4px solid var(--secondary-color);">
+                        <h4><i class="fa-solid fa-network-wired"></i> HoloONE</h4>
+                        <p><strong>B 端運營與加盟護城河</strong></p>
+                        <ul style="font-size: 0.7em;">
+                            <li>內部知識庫 Bot (RAG)</li>
+                            <li>自動化行銷與 SEO</li>
+                            <li>數據分析優化</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Theme 1: HOLO+AI -->
+            <section>
+                <section>
+                    <h2 style="color: var(--accent-color);">Theme 1: HOLO+AI</h2>
+                    <p>將「一次性拍照」延伸為「終身美麗/健康管理」</p>
+                    <i class="fa-solid fa-chevron-down" style="margin-top: 20px; color: #555; animation: bounce 2s infinite;"></i>
+                </section>
+
+                <section>
+                    <h3>1. 智能檢測：膚質與色彩</h3>
+                    <div style="display: flex; gap: 20px; align-items: start;">
+                        <div style="flex: 1; text-align: left;">
+                            <h5 class="highlight">合作延伸應用</h5>
+                            <p><i class="fa-solid fa-link"></i> <strong>串接日康科技 (ZCON)</strong></p>
+                            <p class="small-text">利用其 Face AI 技術提供<strong>「非接觸式生理量測」</strong>（心率、壓力指數）。<br>→ 產出：<span style="color:#fff">HOLO+健康 報告</span>，建議適合的方案。</p>
+                            
+                            <p><i class="fa-solid fa-link"></i> <strong>串接玩美移動</strong></p>
+                            <p class="small-text">導入 AR 虛擬試妝。<br>→ 產出：<span style="color:#fff">導購清單</span>（推薦適合當天拍攝妝容的實體化妝品）。</p>
+                        </div>
+                        <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                            <h5>AI 個人色彩鑑定</h5>
+                            <ul>
+                                <li><strong>痛點</strong>：傳統色彩鑑定昂貴且耗時。</li>
+                                <li><strong>解法</strong>：AI 視覺模型秒測「四季型人」。</li>
+                                <li><strong>變現</strong>：作為高客單價套餐的「增值服務」，或線上引流鉤子。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>2. 既有資產活化：AI 生成式寫真</h3>
+                    <p>貴司擁有數百萬張<strong>「高品質、標準光源、人臉清晰」</strong>的證件照，這是訓練圖像模型的完美金礦。</p>
+                    
+                    <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
+                        <div class="card">
+                            <h6><i class="fa-solid fa-id-card-clip"></i> 應用 A：職場多重宇宙</h6>
+                            <p class="small-text">客戶拍完證件照後，系統自動訓練專屬模型。未來他需要「LinkedIn 商務照」、「聖誕節賀卡照」時，<strong>無需重拍</strong>，直接線上付費生成。</p>
+                        </div>
+                        <div class="card">
+                            <h6><i class="fa-solid fa-user-clock"></i> 應用 B：時光機特效</h6>
+                            <p class="small-text">結合日康科技的健康概念，生成「10 年後的你」與「保養得宜的你」，用視覺衝擊推廣保養品合作或健康套餐。</p>
+                        </div>
+                    </div>
+                    <p class="highlight" style="margin-top: 20px;">商業價值：將 <span style="color:white">LTV (客戶終身價值)</span> 提升 3~5 倍。</p>
+                </section>
+            </section>
+
+            <!-- 5. Theme 2: HoloOne -->
+            <section>
+                <section>
+                    <h2 style="color: var(--secondary-color);">Theme 2: 系統產品化</h2>
+                    <p>打造讓加盟商「離不開」的強大中台</p>
+                    <i class="fa-solid fa-chevron-down" style="margin-top: 20px; color: #555; animation: bounce 2s infinite;"></i>
+                </section>
+
+                <section>
+                    <h3>1. 內部大腦 (RAG Knowledge Bot)</h3>
+                    <p>將 SOP、修圖規範、客訴案例向量化，建立企業級 GPT。</p>
+                    <div class="card-container">
+                        <div class="card" style="text-align: left;">
+                            <h6><i class="fa-solid fa-graduation-cap"></i> 自動化培訓</h6>
+                            <p class="small-text">新人問：「韓式證件照修圖髮絲怎麼處理？」<br>Bot 答：直接調出內部教學影片與規範文檔。</p>
+                        </div>
+                        <div class="card" style="text-align: left;">
+                            <h6><i class="fa-solid fa-shield-halved"></i> 法律/公關防護</h6>
+                            <p class="small-text">當遇到奧客糾紛，店長可詢問 Bot 獲取符合公司政策的標準回應話術，降低公關風險。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>2. 門市賦能系統 (Store OS)</h3>
+                    <p>讓總部能像管一家店一樣管理一百家店。</p>
+                    <ul style="font-size: 0.7em; text-align: left; display: inline-block;">
+                        <li style="margin-bottom: 15px;">
+                            <i class="fa-brands fa-google"></i> <strong>AI 自動化行銷 (Auto-SEO)</strong><br>
+                            <span class="small-text">系統自動篩選每日優質客片（獲授權），由 AI 撰寫 SEO 文案並發布至 Google Maps/Instagram，維持在地搜尋熱度。</span>
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <i class="fa-solid fa-chart-pie"></i> <strong>360 度數據儀表板</strong><br>
+                            <span class="small-text">整合「預約率」、「客單價」、「二次回購率」與「AI 檢測數據」。讓加盟主一眼看出該月營收缺口在哪。</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>3. 企業級資安防護系統</h3>
+                    <p>守住所有門市與總部的資訊安全。</p>
+                    <ul style="font-size: 0.7em; text-align: left; display: inline-block;">
+                        <li style="margin-bottom: 15px;">
+                            <i class="fa-brands fa-cloudflare"></i> <strong>資料加密與外洩防護</strong><br>
+                            <span class="small-text">敏感資料自動加密，偵測異常下載與外傳行為。</span>
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <i class="fa-solid fa-chart-pie"></i> <strong>AI 威脅偵測</strong><br>
+                            <span class="small-text">即時分析異常行為，提前攔截可疑攻擊。</span>
+                        </li>
+                    </ul>
+                </section>
+
+            </section>
+
+            <!-- 6. 建議合作模式 (新加入的重要細節) -->
+            <section>
+                <h3>建議合作模式</h3>
+                <p>靈活彈性，風險共擔，利益共享</p>
+                <div style="font-size: 0.7em;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>模式</th>
+                                <th>適用項目</th>
+                                <th>優點</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:var(--accent-color)"><strong>合資公司 (JV)</strong></td>
+                                <td>HOLO+AI 全系列產品<br><span class="small-text">(寫真生成/檢測/導購)</span></td>
+                                <td>取得成績、信任後，未來有機會技術入股、激勵團隊持續優化演算法、確保貴司擁有核心資產絕對控制權、不會影響母公司治理。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 7. 結語 -->
+            <section>
+                <h3>Next Step: 啟動計畫</h3>
+                <div style="text-align: left; margin: 0 auto; width: 80%;">
+                    <p><i class="fa-solid fa-circle-check" style="color:var(--secondary-color)"></i> <strong>Phase 1 (MVP)</strong>：串接日康/玩美API + AI 色彩鑑定。</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:var(--secondary-color)"></i> <strong>Phase 2 (Integration)</strong>：導入門市體驗。</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:var(--secondary-color)"></i> <strong>Phase 3 (Scale)</strong>：完成 HoloONE 升級，為擴張市場做準備。</p>
+                </div>
+                
+                <div style="margin-top: 50px; border: 1px dashed #555; padding: 20px; border-radius: 10px;">
+                    <p style="font-size: 0.9em; color: var(--accent-color);">寫好 IPO 的科技故事。</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: false, // 改為 false 避免 SecurityError
+            history: false, // 改為 false 避免 SecurityError
+            transition: 'convex',
+            backgroundTransition: 'zoom'
+        });
+    </script>
+</body>
+</html>
